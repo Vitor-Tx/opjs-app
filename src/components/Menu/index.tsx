@@ -24,10 +24,9 @@ export function Menu() {
         <Product>
           <ProductImage
             source={{
-              uri: `http://192.168.100.33:19000/uploads/${product.imagePath}`
+              uri: `http://192.168.100.33:3001/uploads/${product.imagePath}`
             }}
           />
-
           <ProductDetails>
             <Text weight="600">
               {product.name}
