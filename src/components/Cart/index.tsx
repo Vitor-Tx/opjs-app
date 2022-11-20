@@ -19,6 +19,7 @@ import { Product } from "../../types/Product";
 import { OrderConfirmedModal } from "../OrderConfirmedModal/index";
 import { useState } from "react";
 import { api } from "../../utils/api";
+import { ADDRESS } from "../../../keys";
 
 interface CartProps {
   cartItems: CartItem[];
@@ -70,7 +71,7 @@ export function Cart({ cartItems, onAdd, onDecrement, onConfirmOrder, selectedTa
               <ProductContainer>
                 <Image
                   source={{
-                    uri: `http://192.168.100.33:3001/uploads/${cartItem.product.imagePath}`,
+                    uri: `http://${ADDRESS}:3001/uploads/${cartItem.product.imagePath}`,
                   }}
                 />
                 <QuantityContainer>

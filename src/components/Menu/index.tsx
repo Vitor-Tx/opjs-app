@@ -12,6 +12,7 @@ import {
 import { ProductModal } from "../ProductModal/index";
 import { useState } from "react";
 import { Product } from "../../types/Product";
+import { ADDRESS } from "../../../keys";
 
 interface MenuProps {
   onAddToCart: (product: Product) => void;
@@ -47,7 +48,7 @@ export function Menu({ onAddToCart, products }: MenuProps) {
           <ProductContainer onPress={() => handleOpenModal(product)}>
             <ProductImage
               source={{
-                uri: `http://192.168.100.33:3001/uploads/${product.imagePath}`,
+                uri: `http://${ADDRESS}:3001/uploads/${product.imagePath}`,
               }}
             />
             <ProductDetails>
